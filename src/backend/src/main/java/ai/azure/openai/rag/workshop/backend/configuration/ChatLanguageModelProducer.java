@@ -21,12 +21,11 @@ public class ChatLanguageModelProducer {
   @Produces
   public ChatLanguageModel chatLanguageModel() {
     return AzureOpenAiChatModel.builder()
-      .apiKey(azureOpenAiKey)
-      .endpoint(azureOpenAiEndpoint)
-      .deploymentName(azureOpenAiDeploymentName)
-      .timeout(ofSeconds(60))
-      .logRequestsAndResponses(true)
-      .build();
+        .apiKey(azureOpenAiKey)
+        .endpoint(azureOpenAiEndpoint)
+        .deploymentName(azureOpenAiDeploymentName)
+        .timeout(ofSeconds(60))
+        .logRequestsAndResponses(true)
+        .build();
   }
 }
-
