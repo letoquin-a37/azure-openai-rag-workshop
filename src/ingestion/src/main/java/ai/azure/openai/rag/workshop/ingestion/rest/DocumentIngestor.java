@@ -45,7 +45,7 @@ public class DocumentIngestor {
           log.debug("# PDF size: {}", document.text().length());
 
           log.info("### Split document into segments 100 tokens each");
-          DocumentSplitter splitter = DocumentSplitters.recursive(2000, 200);
+          DocumentSplitter splitter = DocumentSplitters.recursive(2000, 200); // max Segment size in chars and max overlap size in chars
           List<TextSegment> segments = splitter.split(document);
           for (TextSegment segment : segments) {
             log.debug("# Segment size: {}", segment.text().length());

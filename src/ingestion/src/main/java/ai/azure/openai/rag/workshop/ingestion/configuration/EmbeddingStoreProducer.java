@@ -38,7 +38,7 @@ public class EmbeddingStoreProducer {
       qdrantClient.createCollectionAsync(
         azureSearchIndexName,
         VectorParams.newBuilder()
-          .setSize(384)
+          .setSize(384) // model size
           .setDistance(Distance.Cosine)
           .build()
       ).get();
